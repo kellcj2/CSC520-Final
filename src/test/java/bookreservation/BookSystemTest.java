@@ -9,7 +9,7 @@ public class BookSystemTest {
 	public void checkBookInfo() {
 		String isbn = "1234253", title = "title", author = "author";
 		String desc = "book description", category = "fiction", location = "here";
-		String status = "available", reservedUser = "username";
+		String status = "Available", reservedUser = "username";
 		int number = 42;
 		boolean reserved = true;
 		CatalogedBook b = new CatalogedBook(isbn, title, author, desc,

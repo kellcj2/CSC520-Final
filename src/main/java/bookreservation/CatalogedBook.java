@@ -27,7 +27,7 @@ public class CatalogedBook {
 
 	public String getLoc() { return location; }
 
-	public String getStatus() { return status; }
+	public String getStatus() { return (this.getReserved()) ? "Unavailable" : "Available" ; }
 
 	public int getNumber() { return number; }
 
@@ -40,6 +40,4 @@ public class CatalogedBook {
 	public void setReserved(boolean r) { reserved = r; }
 
 	public void setReservedUser(String u) { reservedUser = u; }
-
-
 }

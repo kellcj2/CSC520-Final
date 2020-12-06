@@ -55,6 +55,4 @@ public class Catalog {
 	public ArrayList<CatalogedBook> searchCatalog(String term) {
 		return books;
 	}
-
-	
 }
