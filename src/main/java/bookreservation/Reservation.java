@@ -19,7 +19,11 @@ public class Reservation {
             book.setReserved(true);
             book.setReservedUser(response);
         }
-
+		/* for unit testing */
+		public static void makeReservation(CatalogedBook book, String name) {
+            book.setReserved(true);
+            book.setReservedUser(name);
+        }
         public static void cancelReservation(CatalogedBook book) {
               book.setReserved(false);
               book.setReservedUser(""); 

@@ -17,7 +17,6 @@ public class Catalog {
 		loadCatalog(bookfile);
 	}
 
-	
 	/* loadCatalog
 	   reads csv file and loads books into catalog
 	   - String bookfile: name of file
@@ -53,6 +52,13 @@ public class Catalog {
 	}
 
 	public ArrayList<CatalogedBook> searchCatalog(String term) {
-		return books;
+		ArrayList<CatalogedBook> result = new ArrayList<CatalogedBook>();
+		for(CatalogedBook cb : books) {
+			if(cb.getTitle().toLowerCase().contains(term) ||
+			   cb.getAuthor().toLowerCase().contains(term))
+				result.add(cb);
+		}
+
+		return result;
 	}
 }

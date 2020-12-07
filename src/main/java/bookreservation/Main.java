@@ -104,16 +104,7 @@ public class Main {
 		String response = b.readLine().toLowerCase();
 		System.out.println(lineBreak);
 
-		ArrayList<CatalogedBook> result = new ArrayList<CatalogedBook>();
-		ArrayList<CatalogedBook> books = catalog.browseCatalog();
-		
-		// find all books with authors or titles containing user response		
-		for(int i=0; i < books.size(); i++) {
-			if(books.get(i).getTitle().toLowerCase().contains(response) ||
-			   books.get(i).getAuthor().toLowerCase().contains(response))
-				result.add(books.get(i));
-		}
-
+		ArrayList<CatalogedBook> result = catalog.searchCatalog(response);
 		if(result.size() > 0) // display books containing result
 			browse(result);
 		else
